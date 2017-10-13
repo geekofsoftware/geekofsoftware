@@ -156,7 +156,61 @@
 				<h2 class="section-heading">Fale Conosco</h2>
 				<p><span class="glyphicon glyphicon-earphone"></span><br> <a href="https://api.whatsapp.com/send?phone=5511981297199"> +55 (11) 98129-7199</a></p>
 				<p><span class="glyphicon glyphicon-envelope"></span><br> <a href="mailto:geekofsoftware@gmail.com">geekofsoftware@gmail.com</a></p>
-        	</div>
+        	</div>	
+        	<a href="#Foo" class="btn btn-default" data-toggle="collapse">Entrar em contato</a>
+			<div id="Foo" class="collapse">
+    		
+				    		<br>
+				<div class="container" align="center">
+    <div class="row"><div class="well">
+                <div class="row">
+                   <form id="formdecontato" action="https://script.google.com/macros/s/AKfycbwq8-ySRmsfp-ynE9H0Yp6kHvBQJ2UWKfY-X8niQnhXsPPk7dc/exec" method="post" data-toggle="validator">
+                   <fieldset>
+                    <div class="col-md-12"><div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Nome</label>
+                                <div class="input-group">
+                                <span class="input-group-addon"><span class="normal glyphicon glyphicon-user"></span>
+                                </span>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome"data-validation="length" data-validation-length="min3"
+		 data-validation-error-msg="O nome tem que ter 3 caratecteres no minimo" required>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Endereço Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="normal glyphicon glyphicon-envelope"></span>
+                                </span>
+  <input type="email" class="form-control" name="email" placeholder="Email" data-validation="email" data-validation-error-msg="Email invalido" required>                                    
+                                </div>
+                                <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">
+                                Mensagem </label>&nbsp;(<span id="pres-max-length">300</span> caracteres sobrando)
+                            <textarea name="mensagem" id="mensagem" class="form-control" rows="9" cols="25"
+                                placeholder="Digite a mensagem" data-validation="length" data-validation-length="min3"
+		 data-validation-error-msg="A mensagem tem que ter no minimo 3 caracteres e 300 no máximo" required></textarea>
+                        </div>
+                    
+<div class="alert alert-success" role="alert" id="mensagem_sucesso">Sucesso <i class="normal glyphicon glyphicon-thumbs-up"></i> Agradecemos por entrar em contato, responderemos o mais rápido possível.</div>
+
+                        <button type="submit" class="btn btn-primary" id="btnEnviar"><span class="normal glyphicon glyphicon-send"></span>
+							Enviar Mensagem</button>
+                </div>
+				</fieldset>
+                </form>
+        </div>
+    </div>
+	</div></div>
+
+        							
+			</div>
+        	
+        	
         </div>
         <div class="copyright">
         	<br>
@@ -169,16 +223,58 @@
 
 
     <script src="js/jquery.min.js"></script>
-
- 
     <script src="js/bootstrap.min.js"></script>
-
-
     <script src="js/jquery.easing.min.js"></script>
-    
-        <script src="js/scrolling-nav.js"></script>
+    <script src="js/scrolling-nav.js"></script>
     <script src="js/custom.js"></script>
-
+	<script src="js/fuck.js"></script>
+	<script data-cfasync="false" type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+	// variable to hold request
+	var request;
+	// bind to the submit event of our form
+	$("#formdecontato").submit(function(event){
+		// abort any pending request
+		if (request) {
+			request.abort();
+		}
+		// setup some local variables
+		var $form = $(this);
+		// let's select and cache all the fields
+		var $inputs = $form.find("input, select, button, textarea");
+		// serialize the data in the form
+		var serializedData = $form.serialize();
+	
+		// let's disable the inputs for the duration of the ajax request
+		// Note: we disable elements AFTER the form data has been serialized.
+		// Disabled form elements will not be serialized.
+		$inputs.prop("disabled", true);
+	
+		// fire off the request to /form.php
+		request = $.ajax({
+			url: "https://script.google.com/macros/s/AKfycbwq8-ySRmsfp-ynE9H0Yp6kHvBQJ2UWKfY-X8niQnhXsPPk7dc/exec",
+			type: "post",
+			data: serializedData
+		});
+	
+		// callback handler that will be called on success
+		request.done(function (response, textStatus, jqXHR){
+			// log a message to the console
+			$('#mensagem_sucesso').slideDown({ opacity: "show" }, "slow");
+		});
+	
+		// callback handler that will be called regardless
+		// if the request failed or succeeded
+		request.always(function () {
+			// reenable the inputs
+			$inputs.prop("disabled", false);
+		});
+	
+		// prevent default posting of form
+		event.preventDefault();
+	});
+});
+</script>
 </body>
 
 </html>

@@ -25,7 +25,6 @@ a {
     -moz-transition: all .35s;
     transition: all .35s;
 }
-
 a:hover,
 a:focus {
     color: #00FFFF
@@ -67,7 +66,9 @@ header .header-content .header-content-inner h1 {
     font-size: 50px;
     font-weight: 300;
 }
-
+#mensagem_sucesso {
+  display: none;
+}
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
@@ -104,14 +105,12 @@ header .header-content .header-content-inner p {
         margin-left: auto;
         max-width: 80%;
         font-size: 18px;
-		<!--tamanho-->
     }
 }
 
 .section-heading {
     margin-top: 0;
     margin-bottom: 20px;
-	<!--tamanho-->
 }
 
 .intro {
@@ -120,7 +119,6 @@ header .header-content .header-content-inner p {
     background-color: black;
     padding: 70px 0;
     text-align: center;
-	<!--tamanho-->
 }
 
 
@@ -132,7 +130,6 @@ header .header-content .header-content-inner p {
 	color: #00FFFF
 ;
     background-color: black;
-	<!--WEBSITE-->
 }
 
 .content-3 {
@@ -151,30 +148,29 @@ header .header-content .header-content-inner p {
 .page-footer {
 	text-align: center;
 	}
-
+.well{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+	
+}
 .page-footer .contact {
 	padding: 100px 0;
-	background-color: black  
-
-
-;    
-	color: #00FFFF
-;
-<!---FALA CONOSCO->
+	background-color: black ;    
+	color: #00FFFF;
 	}
 
 .page-footer .contact p {
 	font-size: 22px;
 	font-weight: 300;
-	}
-	<!---FALA CONOSCO->
-	
+	}	
 .content-3 .glyphicon,	
 .page-footer .contact .glyphicon {
 	font-size: 32px;
 	font-weight: 700;
 	}
-		
+.normal{
+	font-size: 16px !important;
+}
 .page-footer .small-print {
 	padding: 50px 0 40px;
 	font-weight: 300;
@@ -183,7 +179,6 @@ header .header-content .header-content-inner p {
 .text-light {
     color: white
 }
-<!--QUEM SOMOS SITE COR-->
 
    
 
@@ -214,7 +209,6 @@ header .header-content .header-content-inner p {
 ;
 font-size: 22px;
 
-	<!Pagina inicial >
 }
 
 .navbar-default .nav > li.active>a:hover,
@@ -279,133 +273,4 @@ font-size: 22px;
         color: #0600ff;/*é aqui */
 ;
     }
-}
-
-.btn-default {
-    border-color: #00FFFF
-;
-    color: #00FFFF;
-    background-color: #00FFFF
-;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    border-color: #00FFFF;
-    color: #00FFFF;
-    background-color: #00FFFF;
-}
-
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    background-image: none;
-}
-
-.btn-default.disabled,
-.btn-default[disabled],
-fieldset[disabled] .btn-default,
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus,
-.btn-default.disabled:active,
-.btn-default[disabled]:active,
-fieldset[disabled] .btn-default:active,
-.btn-default.disabled.active,
-.btn-default[disabled].active,
-fieldset[disabled] .btn-default.active {
-    border-color: #00FFFF
-;
-    background-color: #00FFFF
-;
-}
-
-.btn-default .badge {
-    color:#00FFFF
-;
-    background-color: #222;
-}
-
-.btn-primary {
-    border-color: #00FFFF
-;
-    color: #00FFFF
-;
-    background-color: #00FFFF
-;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-    border-color: #00FFFF
-;
-    color: #00FFFF
-;
-    background-color: #00FFFF
-;
-}
-
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-    background-image: none;
-}
-
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-    border-color: #00FFFF
-;
-    background-color: #00FFFF
-;
-}
-
-.btn-primary .badge {
-    color: #00FFFF
-;
-    background-color: #fff;
-}
-
-
-
-
-
-
-.bg-primary {
-    background-color: #00FFFF;
 }

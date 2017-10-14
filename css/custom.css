@@ -13,13 +13,30 @@ body {
 	src: url(../fonts/SourceSansPro-Light.woff2) format("woff2");
 	unicode-range: U+000-5FF;
 }
+.navbar-default{
+	background-color: rgba(99, 255, 246, 0.83);
+	border-color: rgba(99, 255, 246, 0.83);
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+		background-color: rgba(99, 255, 246, 0.83);
+}
+.dropdown-menu{
+		background-color: rgba(99, 255, 246, 0.95);
+	font-size:18px;
+}
+.dropdown-menu > li > a:hover {
+    background-color: rgb(4, 255, 255);
+    background-image: none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active, .navbar-default .navbar-nav > .active > a:focus{
+	color: black;
+}
 h1{
     font-family: 'SourceSansPro Regular';
 }
 h2{
     font-family: 'SourceSansPro Regular';
 }
-
 a {
     color: #00fbff;
     -webkit-transition: all .35s;
@@ -198,16 +215,12 @@ header .header-content .header-content-inner p {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #00FFFF
-;
+    color: #00FFFF;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: black 
-!important;
-    background-color: rgba(99, 255, 246, 0.69)
-;
+    background-color: rgba(99, 255, 246, 0.69);
 font-size: 22px;
 
 }
